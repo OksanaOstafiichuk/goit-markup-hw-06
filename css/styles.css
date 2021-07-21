@@ -587,8 +587,9 @@ body {
   text-align: center;
   color: var(--text-color);
 
-  transition: color 250ms var(--function-transition),
-    backgroud-color 250ms var(--function-transition), box-shadow 250ms var(--function-transition);
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--function-transition);
 }
 
 .current-btn,
@@ -823,6 +824,7 @@ body {
 .modal-form-checkbox-label {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: var(--set-gap);
 
   line-height: 1.71;
@@ -833,12 +835,12 @@ body {
 .modal-form-checkbox-label::before {
   content: '';
   display: block;
-  margin-left: 12px;
   margin-right: 9px;
   width: 16px;
   height: 16px;
-  background-image: url(../images/icons/vector-checkbox.svg);
 
+  border: 2px solid #000000;
+  border-radius: 2px;
   cursor: pointer;
 }
 
@@ -846,6 +848,7 @@ body {
   background-image: url(../images/icons/icon-check.svg);
   background-color: var(--accent-color);
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   border-color: transparent;
 }
